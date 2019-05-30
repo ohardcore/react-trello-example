@@ -78,7 +78,7 @@ class App extends Component {
                     </button>
                     <Board
                         editable
-												onCardAdd={this.handleCardAdd}
+					    onCardAdd={this.handleCardAdd}
                         data={this.state.boardData}
                         draggable
                         onDataChange={this.shouldReceiveNewData}
