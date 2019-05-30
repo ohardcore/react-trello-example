@@ -4,6 +4,7 @@ import {Board} from 'react-trello'
 
 const data = require('./data.json')
 //test commit
+//sumi test commit
 const handleDragStart = (cardId, laneId) => {
     console.log('drag started')
     console.log(`cardId: ${cardId}`)
