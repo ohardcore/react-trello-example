@@ -66,7 +66,7 @@ class App extends Component {
         return (
             <div className="App">
                 <div className="App-header">
-                    <h3>React Trello Demo</h3>
+                    <h3>스마트 PLM팀</h3>
                 </div>
                 <div className="App-intro">
                     <button onClick={this.completeCard} style={{margin: 5}}>

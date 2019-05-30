@@ -55,7 +55,7 @@
       "id": "BLOCKED",
       "title": "Blocked",
       "label": "0/0",
-      "style": {"width": 280},
+      "style": {"width": 200},
       "cards": []
     },
     {
