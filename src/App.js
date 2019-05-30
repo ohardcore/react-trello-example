@@ -76,6 +76,8 @@ class App extends Component {
                      <Clock format={'YYYY년 MM월 DD일 HH:mm:ss 입니다.'}
                      ticking={true}/>
                     </h4>
+                    </div>
+                    
                     <Board
                         editable
 					    onCardAdd={this.handleCardAdd}
@@ -86,8 +88,8 @@ class App extends Component {
                         handleDragStart={handleDragStart}
                         handleDragEnd={handleDragEnd}
                     />
+                    
                 </div>
-            </div>
         )
     }
 }
