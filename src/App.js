@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import './App.css'
 import {Board} from 'react-trello'
+import Clock from 'react-live-clock'
 
 const data = require('./data.json')
 //test commit
@@ -70,12 +71,11 @@ class App extends Component {
                     <h3>스마트 PLM팀</h3>
                 </div>
                 <div className="App-intro">
-                    <button onClick={this.completeCard} style={{margin: 5}}>
-                        Complete Buy Milk
-                    </button>
-                    <button onClick={this.addCard} style={{margin: 5}}>
-                        Add Blocked
-                    </button>
+
+                    <h4>
+                     <Clock format={'YYYY년 MM월 DD일 HH:mm:ss 입니다.'}
+                     ticking={true}/>
+                    </h4>
                     <Board
                         editable
 					    onCardAdd={this.handleCardAdd}
