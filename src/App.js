@@ -2,6 +2,12 @@ import React, {Component} from 'react'
 import './App.css'
 import {Board} from 'react-trello'
 import Clock from 'react-live-clock'
+//import { Button } from 'reactstrap';
+import {storiesOf} from '@storybook/react';
+import { action } from '@storybook/addon-actions';
+import { linkTo } from '@storybook/addon-links';
+import { Button, Welcome } from '@storybook/react/demo';
+
 
 const data = require('./data.json')
 //test commit
@@ -68,18 +74,23 @@ class App extends Component {
         return (
             <div className="App">
                 <div className="App-header">
-                    <h3>스마트 PLM팀</h3>
+                    <h3>스마트 PLM팀
+                    storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
+                    storiesOf('Button', module)
+                    .add('with text', () => <Button onClick={action('clicked')}>Hello Button</Button>)
+                    .add('with some emoji', () => <Button onClick={action('clicked')}>😀 😎 👍 💯</Button>);
+                    </h3>
                 </div>
                 <div className="App-intro">
 
                     <h4>
                      <Clock format={'YYYY년 MM월 DD일 HH:mm:ss 입니다.'}
                      ticking={true}
-                    
-                     
+                
                      />
+                     
                     </h4>
-                    
+                    <div className="sc-bZQynM iTzKeC">
                     <Board
                         editable
 					    onCardAdd={this.handleCardAdd}
@@ -89,7 +100,7 @@ class App extends Component {
                         eventBusHandle={this.setEventBus}
                         handleDragStart={handleDragStart}
                         handleDragEnd={handleDragEnd}
-                    />
+                    /> </div>
                 </div>
             </div>
         )
