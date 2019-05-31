@@ -75,6 +75,8 @@ class App extends Component {
                     <h4>
                      <Clock format={'YYYY년 MM월 DD일 HH:mm:ss 입니다.'}
                      ticking={true}
+                    
+                     
                      />
                     </h4>
                     
