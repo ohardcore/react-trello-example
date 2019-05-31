@@ -5,7 +5,7 @@ import Clock from 'react-live-clock'
 
 const data = require('./data.json')
 //test commit
-//sumi test commit
+//sumi test
 const handleDragStart = (cardId, laneId) => {
     console.log('drag started')
     console.log(`cardId: ${cardId}`)
@@ -36,6 +36,8 @@ class App extends Component {
             resolve(data)
         })
     }
+
+
 
     completeCard = () => {
         this.state.eventBus.publish({
