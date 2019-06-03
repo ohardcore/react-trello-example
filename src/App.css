@@ -1,6 +1,4 @@
-.App {
-  
-}
+.App {}
 
 .App-header {
   background-color:skyblue;
@@ -13,15 +11,6 @@
   font: oblique small-caps bold 30px italic;
 }
 
-<<<<<<< HEAD
-.App-intro-clock {
-  text-align: center;
-  /*font-size: middle;*/
-  font: oblique small-caps bold 20px italic;
-  margin: 4;
-}
-=======
->>>>>>> 30c19bcf338f73e5e00bed028844a9c330dfd443
 
 .App-intro {
   text-align: center;
