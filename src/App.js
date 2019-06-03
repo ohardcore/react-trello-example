@@ -1,10 +1,17 @@
 import React, {Component} from 'react'
 import './App.css'
 import {Board} from 'react-trello'
+<<<<<<< HEAD
 import Clock from 'react-live-clock'
 import { Button } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Alert } from 'reactstrap';
+=======
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Clock from './Clock'
+
+
+>>>>>>> 30c19bcf338f73e5e00bed028844a9c330dfd443
 
 
 const data = require('./data.json')
@@ -43,7 +50,7 @@ class App extends Component {
 
 
 
-    completeCard = () => {
+ /*   completeCard = () => {
         this.state.eventBus.publish({
             type: 'ADD_CARD',
             laneId: 'COMPLETED',
@@ -59,7 +66,7 @@ class App extends Component {
             card: {id: 'Ec2Error', title: 'EC2 Instance Down', label: '30 mins', description: 'Main EC2 instance down'}
         })
     }
-
+*/
     shouldReceiveNewData = nextData => {
         console.log('New card has been added')
         console.log(nextData)
@@ -81,6 +88,7 @@ class App extends Component {
                 </div>
                 
 
+<<<<<<< HEAD
                     <h4 className="App-intro-clock">
                     <Alert color="primary">
                      <Clock format={
@@ -94,6 +102,9 @@ class App extends Component {
                      </div>
                      </h4>
                      <div className="App-intro">
+=======
+                    <Clock clock />
+>>>>>>> 30c19bcf338f73e5e00bed028844a9c330dfd443
                     <Board
                         editable
 					    onCardAdd={this.handleCardAdd}
@@ -102,9 +113,17 @@ class App extends Component {
                         onDataChange={this.shouldReceiveNewData}
                         eventBusHandle={this.setEventBus}
                         handleDragStart={handleDragStart}
+<<<<<<< HEAD
                         handleDragEnd={handleDragEnd}
                     />
                     </div>
+=======
+                        handleDragEnd={handleDragEnd} 
+                        
+                        addLaneTitle="CREATE A NEW LANE"
+                        canAddLanes
+                    /> </div>
+>>>>>>> 30c19bcf338f73e5e00bed028844a9c330dfd443
                 </div>
             
         )
