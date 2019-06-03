@@ -10,18 +10,20 @@
   color: white;
   /*font-size: '20px';
   font-style: 'italic';*/
-  font: oblique small-caps bold 20px italic;
+  font: oblique small-caps bold 30px italic;
 }
 
-.sc-bZQynM iTzKeC{
-  font: oblique small-caps bold 10px italic;
+.App-intro-clock {
+  text-align: center;
+  /*font-size: middle;*/
+  font: oblique small-caps bold 20px italic;
+  margin: 4;
 }
 
 .App-intro {
   text-align: center;
   /*font-size: middle;*/
-  font: oblique small-caps bold 10px italic;
-  margin: 2;
+  font: oblique small-caps lighter 15px serif;
 }
 
 @keyframes App-logo-spin {

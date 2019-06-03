@@ -2,9 +2,9 @@ import React, {Component} from 'react'
 import './App.css'
 import {Board} from 'react-trello'
 import Clock from 'react-live-clock'
-//import { Button } from 'reactstrap';
+import { Button } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-//import { Alert } from 'reactstrap';
+import { Alert } from 'reactstrap';
 
 
 const data = require('./data.json')
@@ -74,19 +74,26 @@ class App extends Component {
         return (
             <div className="App">
                 <div className="App-header">
-                    <h3>스마트 PLM팀
+                    <h3>
+                        스마트 PLM팀
+                        
                     </h3>
                 </div>
-                <div className="App-intro">
+                
 
-                    <h4>
-                     
+                    <h4 className="App-intro-clock">
+                    <Alert color="primary">
                      <Clock format={
                          'YYYY년 MM월 DD일 HH:mm:ss 입니다.'}
                      ticking={true}
                      />
+                     </Alert>
+                     <div>
+                         <Button color="warning">Add</Button>{''}
+                         <Button color="success">Delete</Button>{''}
+                     </div>
                      </h4>
-                    <div className="sc-bZQynM iTzKeC">
+                     <div className="App-intro">
                     <Board
                         editable
 					    onCardAdd={this.handleCardAdd}
@@ -96,11 +103,13 @@ class App extends Component {
                         eventBusHandle={this.setEventBus}
                         handleDragStart={handleDragStart}
                         handleDragEnd={handleDragEnd}
-                    /> </div>
+                    />
+                    </div>
                 </div>
-            </div>
+            
         )
     }
 }
+
 
 export default App
