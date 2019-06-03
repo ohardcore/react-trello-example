@@ -3,12 +3,8 @@ import './App.css'
 import {Board} from 'react-trello'
 import Clock from 'react-live-clock'
 //import { Button } from 'reactstrap';
-import {storiesOf} from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import { linkTo } from '@storybook/addon-links';
-import { Button, Welcome } from '@storybook/react/demo';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Alert } from 'reactstrap';
+//import { Alert } from 'reactstrap';
 
 
 const data = require('./data.json')
@@ -85,9 +81,8 @@ class App extends Component {
 
                     <h4>
                      
-                     <Clock format={<Alert color="primary">
-                         'YYYY년 MM월 DD일 HH:mm:ss 입니다.'
-                         </Alert>}
+                     <Clock format={
+                         'YYYY년 MM월 DD일 HH:mm:ss 입니다.'}
                      ticking={true}
                      />
                      </h4>
