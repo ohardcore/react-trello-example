@@ -1,10 +1,9 @@
 import React, {Component} from 'react'
 import './App.css'
 import {Board} from 'react-trello'
-//import { Button } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Clock from './Clock'
-//import { Alert } from 'reactstrap';
+
 
 
 
@@ -44,7 +43,7 @@ class App extends Component {
 
 
 
-    completeCard = () => {
+ /*   completeCard = () => {
         this.state.eventBus.publish({
             type: 'ADD_CARD',
             laneId: 'COMPLETED',
@@ -60,7 +59,7 @@ class App extends Component {
             card: {id: 'Ec2Error', title: 'EC2 Instance Down', label: '30 mins', description: 'Main EC2 instance down'}
         })
     }
-
+*/
     shouldReceiveNewData = nextData => {
         console.log('New card has been added')
         console.log(nextData)
@@ -81,7 +80,6 @@ class App extends Component {
                 <div className="App-intro">
 
                     <Clock clock />
-                    <div className="sc-bZQynM iTzKeC">
                     <Board
                         editable
 					    onCardAdd={this.handleCardAdd}
@@ -90,10 +88,13 @@ class App extends Component {
                         onDataChange={this.shouldReceiveNewData}
                         eventBusHandle={this.setEventBus}
                         handleDragStart={handleDragStart}
-                        handleDragEnd={handleDragEnd}
+                        handleDragEnd={handleDragEnd} 
+                        
+                        addLaneTitle="CREATE A NEW LANE"
+                        canAddLanes
                     /> </div>
                 </div>
-            </div>
+            
         )
     }
 }
