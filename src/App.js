@@ -60,6 +60,7 @@ class App extends Component {
         })
     }
 */
+//
     shouldReceiveNewData = nextData => {
         console.log('New card has been added')
         console.log(nextData)
