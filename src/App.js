@@ -1,10 +1,9 @@
 import React, {Component} from 'react'
 import './App.css'
 import {Board} from 'react-trello'
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Clock from './Clock'
 
-
+///
 
 const data = require('./data.json')
 //test commit
@@ -60,7 +59,6 @@ class App extends Component {
                         스마트 PLM팀       
                     </h3>
                 </div>
-                
                     <Clock clock />
                     <Board
                         editable
